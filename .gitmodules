@@ -4,3 +4,6 @@
 [submodule "thirdparty/libpng"]
 	path = thirdparty/libpng
 	url = https://github.com/glennrp/libpng
+[submodule "thirdparty/tinyobjloader"]
+	path = thirdparty/tinyobjloader
+	url = https://github.com/syoyo/tinyobjloader

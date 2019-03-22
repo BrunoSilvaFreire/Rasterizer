@@ -2,6 +2,8 @@
 
 Pixel::Pixel(uint8_t r, uint8_t g, uint8_t b, uint8_t a) : r(r), g(g), b(b), a(a) {}
 
+const Pixel Pixel::white = Pixel(255, 255, 255, 255);
+
 Texture::Texture(unsigned width, unsigned height) {
     buf = new Pixel[width * height];
     Texture::height = height;
@@ -9,7 +11,7 @@ Texture::Texture(unsigned width, unsigned height) {
 
 }
 
-void Texture::setPixel(unsigned x, unsigned y, const Pixel &color) {
+void Texture::set(unsigned x, unsigned y, const Pixel &color) {
     buf[x + y * width] = color;
 }
 

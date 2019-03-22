@@ -13,8 +13,10 @@ set(PNG_SHARED Off CACHE DESC "Disable dynamic linking")
 
 add_subdirectory(thirdparty/libpng)
 
+add_subdirectory(thirdparty/tinyobjloader)
+
 add_executable(rasterizer src/main.cpp include/texture.h src/texture.cpp)
-target_link_libraries(rasterizer gflags png)
+target_link_libraries(rasterizer gflags png tinyobjloader)
 target_include_directories(rasterizer
         PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
